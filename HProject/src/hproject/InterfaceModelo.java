@@ -6,6 +6,8 @@ package hproject;
 
     //POR ENQUANTO O CÓDIGO COMEÇA NA LINHA 110
 
+import hproject.UsuarioAdm;
+
 /**
  *
  * @author user
