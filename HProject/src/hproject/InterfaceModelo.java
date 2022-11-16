@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
 package hproject;
+import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
 
     //POR ENQUANTO O CÓDIGO COMEÇA NA LINHA 110
 
@@ -115,9 +118,7 @@ public class InterfaceModelo extends javax.swing.JDialog {
         
 //Toda essa parte do código do programa é o que acontece quando você clica no botão login
 
-        UsuarioAdm padrao = new UsuarioAdm("usuario",2143);//utiliza o metodo construtor da classe UsuarioAdm
-        String userofc = (jTextUsuario.getText());//extrai o valor inserido no usuario e coloca na variável userofc
-        int senhaofc = Integer.parseInt(jTextSenha.getText());//extrai o valor inserido na senha e coloca na variável senhaofc
+
     }//GEN-LAST:event_jToggleBotaologinActionPerformed
 
     /**
