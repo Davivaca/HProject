@@ -115,7 +115,8 @@ public class InterfaceModelo extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleBotaologinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleBotaologinActionPerformed
-        
+        ControlePrincipal cont1;//aqui criamos um objeto da classe controle, que possui todos os metodos que serao utilizados posteriormente
+        cont1 = new ControlePrincipal();
 //Toda essa parte do código do programa é o que acontece quando você clica no botão login
 
 
