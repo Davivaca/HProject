@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/POO/HProject/HProject/src/recepcao/Main.java</file>
-            <file>file:/C:/POO/HProject/HProject/src/recepcao/Cadastro.java</file>
+            <file>file:/C:/POO/HProject/HProject/src/hproject/HProject.java</file>
+            <file>file:/C:/POO/HProject/HProject/src/hproject/CadastroMedico.java</file>
+            <file>file:/C:/POO/HProject/HProject/src/hproject/AgendamentoConsulta.java</file>
+            <file>file:/C:/POO/HProject/HProject/src/hproject/Cadastro.java</file>
         </group>
     </open-files>
 </project-private>

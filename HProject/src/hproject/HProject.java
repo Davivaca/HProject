@@ -14,7 +14,20 @@ public class HProject {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+    CadastroMedico cm = new CadastroMedico();
+    cm.setNome("julia");
+    cm.setEspecialidade("ginecologista");
+    cm.setCrm(12365);
+    cm.medicos();
+    cm.cadastro();
+    
+    System.out.println("pronto");
+    AgendamentoConsulta ag = new AgendamentoConsulta();
+    ag.datetime(2022, 12, 2);
+    ag.escolherEspecialidade();
+    ag.statusAgendamento();
+    
+    
     }
     
 }

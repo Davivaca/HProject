@@ -6,7 +6,7 @@ package recepcao;
  */
 class Main {
   public static void main(String[] args) {
-    System.out.println("-----CADASTRO DE PACIENTES-----");
+    /*System.out.println("-----CADASTRO DE PACIENTES-----");
     
     Cadastro c = new Cadastro();
     
@@ -17,7 +17,14 @@ class Main {
     c.status();
 
     
-    System.out.println("-----CADASTRO FINALIZADO-----");
+    System.out.println("-----CADASTRO FINALIZADO-----");*/
+    CadastroMedico cm = new CadastroMedico();
+    cm.setNome("julia");
+    cm.setEspecialidade("ginecologista");
+    cm.setCrm(12365);
+    cm.cadastro();
+    System.out.println("pronto");
+    
   }
   
 }

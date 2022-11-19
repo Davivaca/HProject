@@ -1,4 +1,6 @@
-package recepcao;
+package hproject;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -7,11 +9,13 @@ package recepcao;
 public class Cadastro{
   private String paciente;
   private char sexo;
-  private int nascimento;
+  private int nascimento_dia;
+  private int nascimento_mes;
+  private int nascimento_ano;
   private String endereco;
-  private int telefone;
+  private String telefone;
   private String email;
-  private int rg;
+  private String rg;
   private boolean plano;
   private boolean alergia;
   private String qalergia;
@@ -26,15 +30,36 @@ public class Cadastro{
     return this.sexo;
   }
 
-  public int getNascimento(){
-    return this.nascimento;
-  }
+    public int getNascimento_dia() {
+        return nascimento_dia;
+    }
 
+    public void setNascimento_dia(int nascimento_dia) {
+        this.nascimento_dia = nascimento_dia;
+    }
+
+    public int getNascimento_mes() {
+        return nascimento_mes;
+    }
+
+    public void setNascimento_mes(int nascimento_mes) {
+        this.nascimento_mes = nascimento_mes;
+    }
+
+    public int getNascimento_ano() {
+        return nascimento_ano;
+    }
+
+    public void setNascimento_ano(int nascimento_ano) {
+        this.nascimento_ano = nascimento_ano;
+    }
+
+  
   public String getEndereco(){
     return this.endereco;
   }
 
-  public int getTelefone(){
+  public String getTelefone(){
     return this.telefone;
   }
 
@@ -42,7 +67,7 @@ public class Cadastro{
     return this.email;
   }
 
-  public int getRg(){
+  public String getRg(){
     return this.rg;
   }
 
@@ -75,15 +100,12 @@ public class Cadastro{
         System.out.println("Sexo inválido, tente novamente");}
   }
 
-  public void setNascimento(int data){
-    this.nascimento = data;
-  }
   
   public void setEndereco(String end){
     this.endereco = end;
   }
 
-  public void setTelefone(int tel){
+  public void setTelefone(String tel){
     this.telefone = tel;
   }
 
@@ -91,7 +113,7 @@ public class Cadastro{
     this.email = mail;
   }
 
-  public void setRg(int identity){
+  public void setRg(String identity){
     this.rg = identity;
   }
 
@@ -120,14 +142,17 @@ public class Cadastro{
     System.out.println("rg: "+ getRg());
     System.out.println("alergias: "+ getAlergia() + " Se sim, qual: "+ getQalergia());
     System.out.println("Tipo sanguíneo:  "+ getTipoSanguineo());
+    //System.out.println(getIdade());
   }
+
+  //tem algo errado aqui.
+   public Integer getIdade() {
+		GregorianCalendar idade =new GregorianCalendar();
+		GregorianCalendar nascimento=new GregorianCalendar();		
+		int anohj= idade.get(Calendar.YEAR);
+		int anoNascimento=nascimento.get(this.nascimento_ano);
+		return (anohj-anoNascimento);
+	}
+
 }
 
-
-/*
-1. arrumar tamanho de inteiro em contato
-2. arrumar condição para sexo do paciente
-3. calcular idade do paciente em nascimento
-4. arrumar tamanho de inteiro em rg
-5. definir múltipla escolha em tipo sangíneo.
-*/
