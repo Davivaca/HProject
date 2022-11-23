@@ -12,17 +12,63 @@ import java.util.Scanner;
 public class InterfacePrimit {
     private int option;
     private String ag;
+    int opt2;
     ControlePrincipal cont12;//aqui criamos um objeto da classe controle, para poder utilizar seus metodos
     public InterfacePrimit(){
-    cont12 = new ControlePrincipal();
+    cont12 = new ControlePrincipal();//utilizandoo metodo construtor
     }
-    public void intermed(){
-    
+    public void intermed(){//toda essa parte se refere a interface dos medicos
+    while(opt2!=3){//enquanto nao for inserido o valor 3 a interface continua funcionando
+    System.out.println("---------------------------------------------");
+    System.out.println("Bem vindo/a por favor escolha uma das opções a seguir");
+    System.out.println("---------------------------------------------");
+    System.out.println(" 1- Verificar lista de pacientes");
+    System.out.println(" 2- Adicionar pacientes");
+    System.out.println(" 3- Sair");
+    System.out.println("---------------------------------------------");  
+    Scanner leroption = new Scanner(System.in);//objeto que vai ler a opcao inserida
+    opt2 = leroption.nextInt();//insere a opcao
+            switch (opt2) {
+                case 1:
+                cont12.Pacienteshow();//mostra todos os pacientes todos esses metodos estao na classe controle principal
+                    break;
+                case 2:
+                Scanner lerpa = new Scanner(System.in);//objeto que vai ler o novo paciente
+                    String paci;
+                    System.out.println("Por favor insira um paciente");
+                    System.out.println("---------------------------------------------");
+                    paci = lerpa.next();//string paci recebe a string inserida pelo usuario
+                    cont12.addpaci(paci);//string e adicionada na lista principal
+                    break;
+                default:
+                    break;
+            }
+        }
     }
-    public void interadm(){
-    
+    public void interadm(){//toda essa parte se refere a interface dos administradores financeiros
+    while(opt2!=3){//enquanto nao for inserido o valor 3 a interface continua funcionando
+    System.out.println("---------------------------------------------");
+    System.out.println("Bem vindo/a por favor escolha uma das opções a seguir");
+    System.out.println("---------------------------------------------");
+    System.out.println(" 1- Verificar gastos financeiros");
+    System.out.println(" 2- opção a adicionar");
+    System.out.println(" 3- Sair");
+    System.out.println("---------------------------------------------");  
+    Scanner leroption = new Scanner(System.in);//objeto que vai ler a opcao inserida
+    opt2 = leroption.nextInt();//insere a opcao
+            switch (opt2) {
+                case 1:
+                
+                    break;
+                case 2:
+                
+                    break;
+                default:
+                    break;
+            }
+        }  
     }
-    public void interrec(){
+    public void interrec(){//toda essa parte se refere a interface dos recepcionistas
     while(option!=4){
     System.out.println("---------------------------------------------");
     System.out.println("Bem vindo/a por favor escolha uma das opções a seguir");
@@ -37,7 +83,7 @@ public class InterfacePrimit {
     Scanner geral = new Scanner(System.in);//um scanner geral
             switch (option) {
                 case 1:
-                cont12.Agendshow();
+                cont12.Agendshow();//mostra todos os agendamentos todos esses metodos estao na classe controle principal
                     break;
                 case 2:
                     System.out.println("Por favor insira um agendamento");
@@ -69,5 +115,4 @@ public class InterfacePrimit {
     public void setAg(String ag) {
         this.ag = ag;
     }
-    
 }

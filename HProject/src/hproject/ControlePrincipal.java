@@ -127,4 +127,13 @@ public class ControlePrincipal {
         agenda.clear();
         return null;   
     }   
+        public String Pacienteshow(){//mostra todos os elementos da lista de pacientes
+        int n;
+        n=pacientes.size();
+        int i;
+      for (i=0; i<n; i++) {
+      System.out.println( pacientes.get(i));
+        }
+        return null;   
+    }  
 }
