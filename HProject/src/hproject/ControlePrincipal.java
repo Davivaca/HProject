@@ -11,17 +11,20 @@ import java.util.ArrayList;
  * @author Davi Guedes
  */
 public class ControlePrincipal {
-    int verifi;//variavel que verifica se o usuario e adiministrador medico ou recepcionista
-    List medicos = new ArrayList();//criacao da lista de medicos
-    List user_pri = new ArrayList();//criação da lista de usuarios
-    List senhas_pri = new ArrayList();//criação da lista de senhas
-    List pacientes = new ArrayList();//criacao da lista de pacientes
-    List adms = new ArrayList();//criacao da lista de administradores financeiros
-    List recep = new ArrayList();//criacao da lista de recepcionistas
+    private int verifi;//variavel que verifica se o usuario e adiministrador medico ou recepcionista
+    private List medicos = new ArrayList();//criacao da lista de medicos
+    private List user_pri = new ArrayList();//criação da lista de usuarios
+    private List senhas_pri = new ArrayList();//criação da lista de senhas
+    private List pacientes = new ArrayList();//criacao da lista de pacientes
+    private List adms = new ArrayList();//criacao da lista de administradores financeiros
+    private List recep = new ArrayList();//criacao da lista de recepcionistas
+    private List agenda = new ArrayList();
     public ControlePrincipal() {//classe construtora
     user_pri.add("ADMdavi");//adiciona os usuarios iniciais
     user_pri.add("RECjulia");
     user_pri.add("MEDjoao");
+    
+    agenda.add("12/12/2022, joao");
 
     senhas_pri.add("10023");//adiciona as senhas iniciais
     senhas_pri.add("64599");
@@ -84,13 +87,13 @@ public class ControlePrincipal {
         int tama;//tamanho da string usuario
         tama=useri.length();
     for(int i=0;i<tama;i++ ){
-    if(useri.charAt(i) == 'A'||useri.charAt(i+1)=='D'){
+    if(useri.charAt(i) == 'A' && useri.charAt(i+1)=='D'){
     setVerifi(1);
     break;
-    }else if(useri.charAt(i) == 'R'||useri.charAt(i+1)=='E'){
+    }else if(useri.charAt(i) == 'R' && useri.charAt(i+1)=='E'){
      setVerifi(2);
      break;
-      }else if(useri.charAt(i) == 'M'||useri.charAt(i+1)=='E'){
+      }else if(useri.charAt(i) == 'M' && useri.charAt(i+1)=='E'){
        setVerifi(3);
        break;
        }else{
@@ -107,5 +110,21 @@ public class ControlePrincipal {
     public void setVerifi(int verifi) {
         this.verifi = verifi;
     }
-    
+    public String Agend(String agen){
+        agenda.add(agen);//adiciona um agendamento na lista
+        return null;   
+    }   
+    public String Agendshow(){//mostra todos os elementos da lista de agendamentos
+        int n;
+        n=agenda.size();
+        int i;
+      for (i=0; i<n; i++) {
+      System.out.println( agenda.get(i));
+        }
+        return null;   
+    }   
+    public String Agenderase(){//apaga todos os dados da lista de agendamentos
+        agenda.clear();
+        return null;   
+    }   
 }
