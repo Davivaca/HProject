@@ -23,6 +23,7 @@ public class InterfacePrimit {
     
     }
     public void interrec(){
+    while(option!=4){
     System.out.println("---------------------------------------------");
     System.out.println("Bem vindo/a por favor escolha uma das opções a seguir");
     System.out.println("---------------------------------------------");
@@ -50,6 +51,7 @@ public class InterfacePrimit {
                 default:
                     break;
             }
+        }
     }
 
     public int getOption() {
@@ -67,4 +69,5 @@ public class InterfacePrimit {
     public void setAg(String ag) {
         this.ag = ag;
     }
+    
 }
