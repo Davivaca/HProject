@@ -47,7 +47,9 @@ public class ControlePrincipal {
         return null;   
     }
     public String addmed(String medi,String senhamed){//esse metodo adiciona um novo medico
+    user_pri.add(medi);//adiciona a lista principal
     medicos.add(medi);
+    senhas_pri.add(senhamed);//adiciona a lista de senhas principal
     return null;
     }
     public String ListaAdms(){
@@ -136,4 +138,18 @@ public class ControlePrincipal {
         }
         return null;   
     }  
+        public boolean senhacorreta(String user,String senh){//metodo que verifica se a senha corresponde ao usuario
+        int veri;//variavel que vai localizar a posição do usuario inserido
+        int verisen;//variavel que vai localizar a posição da senha inserida
+        veri=user_pri.indexOf(user);//variavel recebe posicao do usuario
+        verisen=senhas_pri.indexOf(senh);//variavel recebe posicao da senha
+        if(veri==verisen){
+        return true;
+            }else{
+            System.out.println( "-----------------------------------");
+            System.out.println( "Nome de usuario ou senha incorreto!");
+                return false;
+                }
+        
+        }
 }
