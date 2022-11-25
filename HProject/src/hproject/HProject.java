@@ -1,14 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package hproject;
 import java.util.Scanner;
 
-/**
- *
- * @author user
- */
+
 public class HProject {
 
     /**
@@ -29,15 +22,19 @@ public class HProject {
         senha = lersenha.next();
         if(cont11.verificacao(user,senha)==true&&cont11.senhacorreta(user, senha)==true){//verifica se o usuario e senha estao corretos
         cont11.identificacao(user);//chama o metodo para identificar o nome de usuario
+        if(cont11.verificacao(user,senha)==true){
+            cont11.identificacao(user);//chama o metodo para identificar o nome de usuario
             switch (cont11.getVerifi()) {
                 case 1:
                 System.out.println("ADM");
+                inter1.interadm();
                     break;
                 case 2:
                     inter1.interrec();
                     break;
                 case 3:
                     System.out.println("MED");
+                    inter1.intermed();
                     break;
                 default:
                     break;
