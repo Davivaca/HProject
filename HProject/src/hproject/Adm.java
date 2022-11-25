@@ -7,17 +7,18 @@ import java.util.Scanner;
  */
 
 //falta adicionar os elementos às coleções.
-public class Adm {
-    String nome;
-    char sexo;
-    String especialidade;
-    int crm;
-    String login;
-    String senha;
+public class Adm extends ControlePrincipal{
+    //dados usados nos métodos e que possivelmente serão usados.
+    private String nome;
+    private String sexo;
+    private String especialidade;
+    private int crm;
+    private String login;
+    private String senha;
     
     Scanner adms = new Scanner(System.in);
     
-    public void cadastrarMedicos(){
+    public void cadastrarMedicos(){ //criar login e senhas para os usuários médicos.
         System.out.println("------------------Cadastro de médicos------------------");
         System.out.println("Crie um login e senha:");
         this.login = adms.next();
@@ -25,7 +26,7 @@ public class Adm {
         System.out.println("Login: " + getLogin()+ " e Senha: " +getSenha()+ " criados.");
     }
     
-    public void cadastrarAdm(){
+    public void cadastrarAdm(){//criar login e senhas para outros usuários administradores.
         System.out.println("------------------Cadastro de adms------------------");
         System.out.println("Crie um login e senha:");
         this.login = adms.next();
@@ -34,7 +35,7 @@ public class Adm {
         
     }
     
-    public void cadastrarRecepcao(){
+    public void cadastrarRecepcao(){//criar login e senhas para os usuários que usarão os serviços da recepção.
         System.out.println("------------------Cadastro para recepção------------------");
         System.out.println("Crie um login e senha:");
         this.login = adms.next();
@@ -42,6 +43,7 @@ public class Adm {
         System.out.println("Login: " + getLogin()+ " e Senha: " +getSenha()+ " criados.");
     }
 
+    //getters e setters dos objetos.
     public String getNome() {
         return nome;
     }
@@ -50,11 +52,11 @@ public class Adm {
         this.nome = nome;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 

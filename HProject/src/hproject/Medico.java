@@ -45,6 +45,7 @@ public class Medico {
         
     }
 
+        //getters and setters da classe
     public String getPaciente() {
         return paciente;
     }

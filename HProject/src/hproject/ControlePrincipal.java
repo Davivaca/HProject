@@ -13,12 +13,12 @@ import java.util.ArrayList;
 public class ControlePrincipal {
     private int verifi;//variavel que verifica se o usuario e adiministrador medico ou recepcionista
     private List medicos = new ArrayList();//criacao da lista de medicos
-    private List user_pri = new ArrayList();//criação da lista de usuarios
-    private List senhas_pri = new ArrayList();//criação da lista de senhas
+    private List user_pri = new ArrayList();//criacao da lista de usuarios
+    private List senhas_pri = new ArrayList();//criacao da lista de senhas
     private List pacientes = new ArrayList();//criacao da lista de pacientes
     private List adms = new ArrayList();//criacao da lista de administradores financeiros
     private List recep = new ArrayList();//criacao da lista de recepcionistas
-    private List agenda = new ArrayList();
+    public List agenda = new ArrayList();
     
     public ControlePrincipal() {//classe construtora
         user_pri.add("ADMdavi");//adiciona os usuarios iniciais
@@ -52,8 +52,10 @@ public class ControlePrincipal {
     }
     
     public String addmed(String medi,String senhamed){//esse metodo adiciona um novo medico
-        medicos.add(medi);
-        return null;
+    user_pri.add(medi);//adiciona a lista principal
+    medicos.add(medi);
+    senhas_pri.add(senhamed);//adiciona a lista de senhas principal
+    return null;
     }
     
     public String ListaAdms(){
@@ -142,4 +144,27 @@ public class ControlePrincipal {
         System.out.println("Agenda com " + agenda.size() + " compromissos.");
         return null; 
     }   
+        public String Pacienteshow(){//mostra todos os elementos da lista de pacientes
+        int n;
+        n=pacientes.size();
+        int i;
+      for (i=0; i<n; i++) {
+      System.out.println( pacientes.get(i));
+        }
+        return null;   
+    }  
+        public boolean senhacorreta(String user,String senh){//metodo que verifica se a senha corresponde ao usuario
+        int veri;//variavel que vai localizar a posição do usuario inserido
+        int verisen;//variavel que vai localizar a posição da senha inserida
+        veri=user_pri.indexOf(user);//variavel recebe posicao do usuario
+        verisen=senhas_pri.indexOf(senh);//variavel recebe posicao da senha
+        if(veri==verisen){
+        return true;
+            }else{
+            System.out.println( "-----------------------------------");
+            System.out.println( "Nome de usuario ou senha incorreto!");
+                return false;
+                }
+        
+        }
 }

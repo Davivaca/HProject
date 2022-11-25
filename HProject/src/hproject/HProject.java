@@ -20,6 +20,8 @@ public class HProject {
         String user;
         user = leruser.next();
         senha = lersenha.next();
+        if(cont11.verificacao(user,senha)==true&&cont11.senhacorreta(user, senha)==true){//verifica se o usuario e senha estao corretos
+        cont11.identificacao(user);//chama o metodo para identificar o nome de usuario
         if(cont11.verificacao(user,senha)==true){
             cont11.identificacao(user);//chama o metodo para identificar o nome de usuario
             switch (cont11.getVerifi()) {
@@ -38,8 +40,10 @@ public class HProject {
                     break;
             }
         }else{
+        System.out.println("------------------");
         System.out.println("Cadastro invalido!");
         }
     }
     
+}
 }

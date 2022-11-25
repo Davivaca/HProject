@@ -14,7 +14,7 @@ public class InterfacePrimit {
     }
     
     
-    public void intermed(){
+    public void intermed(){//interface dos medicos.
         while(option!=4){
             System.out.println("---------------------------------------------");
             System.out.println("Bem vindo(a). Por favor, escolha uma das opções a seguir:");
@@ -44,7 +44,7 @@ public class InterfacePrimit {
         }
         }
     
-    public void interadm(){
+    public void interadm(){//interface dos administradores.
         while(option!=5){
             System.out.println("---------------------------------------------");
             System.out.println("Bem vindo(a). Por favor, escolha uma das opções a seguir:");
@@ -78,7 +78,7 @@ public class InterfacePrimit {
         }
     }
     
-    public void interrec(){
+    public void interrec(){//toda essa parte se refere a interface dos recepcionista
         while(option!=4){
         System.out.println("---------------------------------------------");
         System.out.println("Bem vindo(a). Por favor, escolha uma das opções a seguir:");

@@ -10,126 +10,149 @@ import java.util.Scanner;
 /*
 Escolher especialidade; Ao total serão: clínico geral, pediatria, ginecologia, ortopedia, otorrinolarigologia, cardiologia e endocrinologista.
 */
-public class AgendamentoConsulta {
-    String especialidade;
-    String dataAgendada;
-    int dia;
-    int mes;
-    int ano;
+public class AgendamentoConsulta extends ControlePrincipal {//vai herdar um método coleção de ControlePrincipal.
+    private String especialidade;
+    private String dataAgendada;
+    private int dia;
+    private int mes;
+    private int ano;
+    
 
-    public void Clinico(){
+    public void Clinico(){//para ter acesso a marcação desta especialidade.
     this.especialidade = "Clinico geral";
     System.out.println("Consulta com " + this.especialidade);
     datetime();
     
     }
     
-    public void Pediatria(){
+    public void Pediatria(){//para ter acesso a marcação desta especialidade.
         this.especialidade = "Pediatria";
         System.out.println("Consulta com " + this.especialidade);
         datetime();
         
     }
     
-    public void Ginecologia(){
+    public void Ginecologia(){//para ter acesso a marcação desta especialidade.
         this.especialidade = "Ginecologia";
         System.out.println("Consulta com " + this.especialidade);
         datetime();
         
     }
     
-    public void Ortopedia(){
+    public void Ortopedia(){//para ter acesso a marcação desta especialidade.
         this.especialidade = "Ortopedia";
         System.out.println("Consulta com " + this.especialidade);
         datetime();
     }
     
-    public void Otorrinolaringologia(){
+    public void Otorrinolaringologia(){//para ter acesso a marcação desta especialidade.
         this.especialidade = "Otorrinolaringologia";
         System.out.println("Consulta com " + this.especialidade);
         datetime();
     }
     
-    public void Cardiologia(){
+    public void Cardiologia(){//para ter acesso a marcação desta especialidade.
         this.especialidade = "Cardiologia";
         System.out.println("Consulta com " + this.especialidade);
         datetime();
     }
     
-    public void Endocrinologia(){
+    public void Endocrinologia(){//para ter acesso a marcação desta especialidade.
         this.especialidade = "Endocrinologia";
         System.out.println("Consulta com " + this.especialidade);
         datetime();
     }
     
     public void escolherEspecialidade() {
-        int opcao;
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("Qual especialidade marcar consulta? Escolha dentre as opções abaixo:");
-        System.out.println("1. Clinico geral");
-        System.out.println("2. Pediatria");
-        System.out.println("3. Ginecologia");
-        System.out.println("4. Ortopedia");
-        System.out.println("5. Otorrinolaringologia");
-        System.out.println("6. Cardiologia");
-        System.out.println("7. Endocrinologia");
-        
-        do{
-            //menu();
-            opcao = entrada.nextInt();
+        //menu para escolher em qual especialidade o paciente deseja realizar consulta.
+        try{
+            int opcao;
             
-            switch(opcao){
-            case 1:
-                Clinico();
-                break;
+            Scanner entrada = new Scanner(System.in);
+            System.out.println("Qual especialidade marcar consulta? Escolha dentre as opções abaixo:");
+            System.out.println("1. Clinico geral");
+            System.out.println("2. Pediatria");
+            System.out.println("3. Ginecologia");
+            System.out.println("4. Ortopedia");
+            System.out.println("5. Otorrinolaringologia");
+            System.out.println("6. Cardiologia");
+            System.out.println("7. Endocrinologia");
+            System.out.println("Digite outro valor para encerrar.");
+
+            do{
+                //menu();
+                opcao = entrada.nextInt();
+
+                switch(opcao){
+                case 1:
+                    Clinico();
+                    break;
+
+                case 2:
+                    Pediatria();
+                    break;
+
+                case 3:
+                    Ginecologia();
+                    break;
+
+                case 4:
+                    Ortopedia();
+                    break;
+
+                case 5:
+                    Otorrinolaringologia();
+                    break;
+
+                case 6:
+                    Cardiologia();
+                    break;
+
+                case 7:
+                    Endocrinologia();
+                    break;
                 
-            case 2:
-                Pediatria();
-                break;
-                
-            case 3:
-                Ginecologia();
-                break;
-                
-            case 4:
-                Ortopedia();
-                break;
-                
-            case 5:
-                Otorrinolaringologia();
-                break;
-                
-            case 6:
-                Cardiologia();
-                break;
-                
-            case 7:
-                Endocrinologia();
-                break;
-            
-            default:
-                System.out.println("Opção inválida. Se deseja encerrar, digite 0.");
+                case 8:
+                    //voltar pra tela inicial. como?
+                    break;
+                default:
+                    break;
+                }
+                } while(opcao != 0);
             }
-        } while(opcao != 0);
+            
+        catch(Exception e){//exceção caso entre algum caractere não permitido.
+            System.out.println("Ocorreu um erro ao tentar escolher uma opção. Tente novamente inserindo apenas valores inteiros");
+            escolherEspecialidade();
+            }
     }
     
-    public void datetime(){
-        Scanner lerano = new Scanner(System.in);
-        Scanner lermes = new Scanner(System.in);
-        Scanner lerdia = new Scanner(System.in);
-        Calendar c = Calendar.getInstance();
-        
-        System.out.println("Insira a data em que deseja agendar consulta (ano > mês > dia) com " + this.especialidade + " :");
-        
-        int ano = lerano.nextInt();
-        int mes = lermes.nextInt();
-        int dia = lerdia.nextInt();
-        
-        c.set(ano, mes, dia);
-        Date data = c.getTime();
-        this.dataAgendada = c.get(Calendar.YEAR) + "/" + c.get(Calendar.MONTH) + "/" + c.get(Calendar.DAY_OF_MONTH);
-        System.out.println("Data/Hora do cadastro: "+c.getTime());
-        System.out.println("Data agendada: "+ this.dataAgendada);
+    public void datetime() {//aqui o usuário vai inserir o dia que deseja agendar a consulta. É printado e guardado a data do agendamento.
+        try{
+            Scanner lerano = new Scanner(System.in);
+            Scanner lermes = new Scanner(System.in);
+            Scanner lerdia = new Scanner(System.in);
+            Calendar c = Calendar.getInstance();
+
+            System.out.println("Insira a data em que deseja agendar consulta (ano > mês > dia) com " + getEspecialidade() + " :");
+
+            int ano = lerano.nextInt();
+            int mes = lermes.nextInt();
+            int dia = lerdia.nextInt();
+
+            c.set(ano, mes, dia);
+            Date data = c.getTime();
+            this.dataAgendada = c.get(Calendar.YEAR) + "/" + c.get(Calendar.MONTH) + "/" + c.get(Calendar.DAY_OF_MONTH);
+            System.out.println("Data/Hora do cadastro: "+c.getTime());
+            String agendamento = "Data agendada: "+ getDataAgendada() + " com "+ getEspecialidade();
+            Agend(agendamento);
+            System.out.println(agendamento);
+            escolherEspecialidade();
+        }
+        catch(Exception e){ //exceção caso entre algum caractere não permitido.
+            System.out.println("Ocorreu um erro ao tentar inserir os dados. Tente novamente inserindo apenas valores inteiros");
+            datetime();
+            }
         }
     
     public void statusAgendamento(){
