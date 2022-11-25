@@ -56,6 +56,11 @@ public class ControlePrincipal {
     medicos.add(medi);
     senhas_pri.add(senhamed);//adiciona a lista de senhas principal
     return null;
+<<<<<<< HEAD
+=======
+        medicos.add(medi);
+        return null;
+>>>>>>> 09a55e797490d2a3fcdb990ca5e9fc1eb02aa8f9
     }
     
     public String ListaAdms(){
