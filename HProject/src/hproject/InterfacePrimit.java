@@ -13,57 +13,65 @@ public class InterfacePrimit {
     public InterfacePrimit(){
     cont12 = new ControlePrincipal();//utilizandoo metodo construtor
     }
-    public void intermed(){//toda essa parte se refere a interface dos medicos
-    while(opt2!=3){//enquanto nao for inserido o valor 3 a interface continua funcionando
-    System.out.println("---------------------------------------------");
-    System.out.println("Bem vindo/a por favor escolha uma das opções a seguir");
-    System.out.println("---------------------------------------------");
-    System.out.println(" 1- Verificar lista de pacientes");
-    System.out.println(" 2- Adicionar pacientes");
-    System.out.println(" 3- Sair");
-    System.out.println("---------------------------------------------");  
-    Scanner leroption = new Scanner(System.in);//objeto que vai ler a opcao inserida
-    opt2 = leroption.nextInt();//insere a opcao
-            switch (opt2) {
-                case 1:
-                cont12.Pacienteshow();//mostra todos os pacientes todos esses metodos estao na classe controle principal
-                    break;
-                case 2:
-                Scanner lerpa = new Scanner(System.in);//objeto que vai ler o novo paciente
-                    String paci;
-                    System.out.println("Por favor insira um paciente");
-                    System.out.println("---------------------------------------------");
-                    paci = lerpa.next();//string paci recebe a string inserida pelo usuario
-                    cont12.addpaci(paci);//string e adicionada na lista principal
-                    break;
-                default:
-                    break;
-            }
-        }
-    }
-    public void interadm(){//toda essa parte se refere a interface dos administradores financeiros
-    while(opt2!=3){//enquanto nao for inserido o valor 3 a interface continua funcionando
-    System.out.println("---------------------------------------------");
-    System.out.println("Bem vindo/a por favor escolha uma das opções a seguir");
-    System.out.println("---------------------------------------------");
-    System.out.println(" 1- Verificar gastos financeiros");
-    System.out.println(" 2- opção a adicionar");
-    System.out.println(" 3- Sair");
-    System.out.println("---------------------------------------------");  
-    Scanner leroption = new Scanner(System.in);//objeto que vai ler a opcao inserida
-    opt2 = leroption.nextInt();//insere a opcao
-            switch (opt2) {
-                case 1:
-                
-                    break;
-                case 2:
-                
-                    break;
-                default:
-                    break;
-            }
-        }  
-    }
+    /*esse codigo nao tem mais utilidade mas sera mantido caso surja uma necessidade futura
+    *
+    *public void intermed(){//toda essa parte se refere a interface dos medicos
+    *while(opt2!=3){//enquanto nao for inserido o valor 3 a interface continua funcionando
+    *System.out.println("---------------------------------------------");
+    *System.out.println("Bem vindo/a por favor escolha uma das opções a seguir");
+    *System.out.println("---------------------------------------------");
+    *System.out.println(" 1- Verificar lista de pacientes");
+    *System.out.println(" 2- Adicionar pacientes");
+    *System.out.println(" 3- Sair");
+    *System.out.println("---------------------------------------------");  
+    *Scanner leroption = new Scanner(System.in);//objeto que vai ler a opcao inserida
+    *opt2 = leroption.nextInt();//insere a opcao
+    *        switch (opt2) {
+    *            case 1:
+    *            cont12.Pacienteshow();//mostra todos os pacientes todos esses metodos estao na classe controle principal
+    *                break;
+    *            case 2:
+    *            Scanner lerpa = new Scanner(System.in);//objeto que vai ler o novo paciente
+    *                String paci;
+    *                System.out.println("Por favor insira um paciente");
+    *                System.out.println("---------------------------------------------");
+    *                paci = lerpa.next();//string paci recebe a string inserida pelo usuario
+    *                cont12.addpaci(paci);//string e adicionada na lista principal
+    *                break;
+    *            default:
+    *                break;
+    *        }
+    *    }
+    }*/
+    
+    /*esse codigo nao tem mais utilidade mas sera mantido caso surja uma necessidade futura
+    *
+    *public void interadm(){//toda essa parte se refere a interface dos administradores financeiros
+    *while(opt2!=3){//enquanto nao for inserido o valor 3 a interface continua funcionando
+    *System.out.println("---------------------------------------------");
+    *System.out.println("Bem vindo/a por favor escolha uma das opções a seguir");
+    *System.out.println("---------------------------------------------");
+    *System.out.println(" 1- Verificar gastos financeiros");
+    *System.out.println(" 2- opção a adicionar");
+    *System.out.println(" 3- Sair");
+    *System.out.println("---------------------------------------------");  
+    *Scanner leroption = new Scanner(System.in);//objeto que vai ler a opcao inserida
+    *opt2 = leroption.nextInt();//insere a opcao
+    *        switch (opt2) {
+    *            case 1:
+    *            
+    *                break;
+    *            case 2:
+    *            
+    *                break;
+    *            default:
+    *                break;
+    *        }
+    *    }  
+    }*/
+    
+    /*esse codigo nao tem mais utilidade mas sera mantido caso surja uma necessidade futura
+    
     public void interrec(){//toda essa parte se refere a interface dos recepcionistas
     while(option!=4){
     System.out.println("---------------------------------------------");
@@ -93,7 +101,7 @@ public class InterfacePrimit {
                 default:
                     break;
             }
-    
+    */
     
     public void intermed(){//interface dos medicos.
         while(option!=4){
@@ -132,7 +140,7 @@ public class InterfacePrimit {
             System.out.println("---------------------------------------------");
             System.out.println(" 1- Consultar agenda");
             System.out.println(" 2- Cadastrar Administradores");
-            System.out.println(" 3- Cadastrar Médicos");
+            System.out.println(" 3- Cadastrar Medicos");
             System.out.println(" 4- Cadastrar Recepcionistas");
             System.out.println(" 5- Sair");
             System.out.println("---------------------------------------------");
