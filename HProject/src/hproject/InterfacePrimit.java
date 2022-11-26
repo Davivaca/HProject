@@ -106,10 +106,10 @@ public class InterfacePrimit {
     public void intermed(){//interface dos medicos.
         while(option!=4){
             System.out.println("---------------------------------------------");
-            System.out.println("Bem vindo(a). Por favor, escolha uma das opções a seguir:");
+            System.out.println("Bem vindo(a). Por favor, escolha uma das opcoes a seguir:");
             System.out.println("---------------------------------------------");
             System.out.println(" 1- Consultar agenda");
-            System.out.println(" 2- Avaliação do paciente");
+            System.out.println(" 2- Avaliacao do paciente");
             System.out.println(" 3- Cancelar agendamentos");
             System.out.println(" 4- Sair");
             System.out.println("---------------------------------------------");
@@ -170,7 +170,7 @@ public class InterfacePrimit {
     public void interrec(){//toda essa parte se refere a interface dos recepcionista
         while(option!=4){
         System.out.println("---------------------------------------------");
-        System.out.println("Bem vindo(a). Por favor, escolha uma das opções a seguir:");
+        System.out.println("Bem vindo(a). Por favor, escolha uma das opcoes a seguir:");
         System.out.println("---------------------------------------------");
         System.out.println(" 1- Verificar agendamentos");
         System.out.println(" 2- Fazer agendamento");

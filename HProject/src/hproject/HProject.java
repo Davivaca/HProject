@@ -8,11 +8,19 @@ public class HProject {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        int varfinal=0;
+        while(varfinal!=2){
         // TODO code application logic here
         ControlePrincipal cont11;//aqui criamos um objeto da classe controle, que possui todos os metodos que serao utilizados posteriormente
         cont11 = new ControlePrincipal();
         InterfacePrimit inter1;//aqui criamos um objeto da classe interface, que possui todos os metodos que serao usados para interagir com o usuario
         inter1 = new InterfacePrimit();
+        
+        Scanner lersist = new Scanner(System.in);//um scanner para ler a opcao de sair do sistema 
+        System.out.println("------------------");//um pequeno código para inicializar o sistema
+        System.out.println("Sistema em processamento digite 2 para sair ou 1 para continuar"); 
+        varfinal = lersist.nextInt();
+        if(varfinal==1){
         cont11.apresentar();
         Scanner leruser = new Scanner(System.in);//um scanner para ler o usuario
         Scanner lersenha = new Scanner(System.in);//um scanner para ler a senha
@@ -41,7 +49,13 @@ public class HProject {
         System.out.println("------------------");
         System.out.println("Cadastro invalido!");
         }
+        
     }
-    
-}
+            }else{
+             System.out.println("------------------");
+             System.out.println("Desligando sistema");
+            break;
+            }
+        }
+    }
 }

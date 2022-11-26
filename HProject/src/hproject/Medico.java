@@ -16,12 +16,12 @@ public class Medico {
     private String observacoes;
     
     public void statusAvaliacao(){
-        System.out.println("Avaliação realizada em " + getPaciente() + ". Paciente apresenta: " + getObservacoes());
+        System.out.println("Avaliacao realizada em " + getPaciente() + ". Paciente apresenta: " + getObservacoes());
     }
     
     public void AvaliacaoPaciente(){
         Scanner av = new Scanner(System.in);
-        System.out.println("-----------------Prontuário-----------------");
+        System.out.println("-----------------Prontuario-----------------");
         
         System.out.println("Nome do paciente:");
         this.paciente = av.next();
@@ -30,17 +30,20 @@ public class Medico {
         this.sexo = av.next();
         
         System.out.println("data de nascimento:");
+        System.out.println("dia:");
         this.nascimento_dia = av.nextInt();
+        System.out.println("mes:");
         this.nascimento_mes = av.nextInt();
+        System.out.println("ano:");
         this.nascimento_ano = av.nextInt();
         
         System.out.println("possui alergia? Se sim, listar abaixo:");
         this.qalergia = av.next();
         
-        System.out.println("tipo sanguíneo:");
+        System.out.println("tipo sanguineo:");
         this.tipoSanguineo = av.next();
         
-        System.out.println("Observações sobre a avaliação realizada:");
+        System.out.println("Observacoes sobre a avaliacao realizada:");
         this.observacoes = av.next();
         
     }
