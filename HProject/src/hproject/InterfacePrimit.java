@@ -1,7 +1,7 @@
 package hproject;
 import java.util.Scanner;
 
-public class InterfacePrimit {
+public class InterfacePrimit implements Interface {
     private int option;
     private String ag;
     int opt2;
@@ -104,7 +104,7 @@ public class InterfacePrimit {
                     break;
             }
     */
-    
+    @Override
     public void intermed(){//interface dos medicos.
         while(option!=4){
             System.out.println("---------------------------------------------");
@@ -135,6 +135,7 @@ public class InterfacePrimit {
         }
         }
     
+    @Override
     public void interadm(){//interface dos administradores. "Produtos" são os utensílios usados na unidade hospitalar.
         while(option!=12){
             System.out.println("---------------------------------------------");
@@ -198,6 +199,7 @@ public class InterfacePrimit {
         }
     }
     
+    @Override
     public void interrec(){//toda essa parte se refere a interface dos recepcionista
         while(option!=4){
             System.out.println("---------------------------------------------");
