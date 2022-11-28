@@ -6,10 +6,11 @@ public class InterfacePrimit {
     private String ag;
     int opt2;
     
-    AgendamentoConsulta agconsulta = new AgendamentoConsulta();
-    Medico med = new Medico();
-    Adm adm = new Adm();
+    AgendamentoConsulta agconsulta = new AgendamentoConsulta(); //objeto da classe AgendamentoConsulta para utilizar em sua interface.
+    Medico med = new Medico(); // objeto da classe Medico para chamar em sua interface.
+    Adm adm = new Adm(); // objeto da classe Adm, para utilizar seus métodos.
     ControlePrincipal cont12;//aqui criamos um objeto da classe controle, para poder utilizar seus metodos
+    ControleFinanceiro cf = new ControleFinanceiro();
     
     public InterfacePrimit(){
         cont12 = new ControlePrincipal();//utilizandoo metodo construtor
@@ -134,8 +135,8 @@ public class InterfacePrimit {
         }
         }
     
-    public void interadm(){//interface dos administradores.
-        while(option!=5){
+    public void interadm(){//interface dos administradores. "Produtos" são os utensílios usados na unidade hospitalar.
+        while(option!=12){
             System.out.println("---------------------------------------------");
             System.out.println("Bem vindo(a). Por favor, escolha uma das opções a seguir:");
             System.out.println("---------------------------------------------");
@@ -143,7 +144,14 @@ public class InterfacePrimit {
             System.out.println(" 2- Cadastrar Administradores");
             System.out.println(" 3- Cadastrar Medicos");
             System.out.println(" 4- Cadastrar Recepcionistas");
-            System.out.println(" 5- Sair");
+            System.out.println(" 5- Adicionar Produto");
+            System.out.println(" 6- Listar Produtos ");
+            System.out.println(" 7- Adicionar Clientes");
+            System.out.println(" 8- Total de Produtos");
+            System.out.println(" 9- valor Planos");
+            System.out.println(" 10- Balanço de Contas");
+            System.out.println(" 11- Listar clientes");
+            System.out.println(" 12- Sair");
             System.out.println("---------------------------------------------");
             
             Scanner medico = new Scanner(System.in);
@@ -162,6 +170,28 @@ public class InterfacePrimit {
                         case 4:
                                 adm.cadastrarRecepcao();
                                 break;
+                                
+                        case 5:
+                                cf.adicionaProduto();
+                                break;
+                        case 6:
+                                cf.listarProdutos();
+                                break;
+                        case 7:
+                                cf.adicionaClientes();
+                                break;
+                        case 8:
+                                cf.calculaTotalProdutos();
+                                break;
+                        case 9:
+                                cf.calculaValorPlanos();
+                                break;
+                        case 10:
+                                cf.balanco();
+                                break;  
+                        case 11:
+                            cf.listarClientes();
+                            break;
                         default:
                             break;
                     }
