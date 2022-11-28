@@ -16,33 +16,33 @@ public class Adm extends ControlePrincipal{
     private String login;
     private String senha;
     
-    Scanner adms = new Scanner(System.in);
+    Scanner admsus = new Scanner(System.in);
+    Scanner admsenha = new Scanner(System.in);
     
     public void cadastrarMedicos(){ //criar login e senhas para os usuários médicos.
         System.out.println("------------------Cadastro de médicos------------------");
         System.out.println("Crie um login e senha:");
-        this.login = adms.next();
-        this.senha = adms.next();
+        this.login = admsus.next();
+        this.senha = admsenha.next();
         System.out.println("Login: " + getLogin()+ " e Senha: " +getSenha()+ " criados.");
-        addmed(this.login, this.senha);
+        addmed(this.getLogin(), this.getSenha());
     }
     
     public void cadastrarAdm(){//criar login e senhas para outros usuários administradores.
         System.out.println("------------------Cadastro de adms------------------");
         System.out.println("Crie um login e senha:");
-        this.login = adms.next();
-        this.senha = adms.next();
-        addadm(this.login,this.senha);
+        this.login = admsus.next();
+        this.senha = admsenha.next();
+        addadm(this.getLogin(),this.getSenha());
         System.out.println("Login: " + getLogin()+ " e Senha: " +getSenha()+ " criados.");
-        
     }
     
     public void cadastrarRecepcao(){//criar login e senhas para os usuários que usarão os serviços da recepção.
         System.out.println("------------------Cadastro para recepção------------------");
         System.out.println("Crie um login e senha:");
-        this.login = adms.next();
-        this.senha = adms.next();
-        addrecep(this.login, this.senha);
+        this.login = admsus.next();
+        this.senha = admsenha.next();
+        addrecep(this.getLogin(), this.getSenha());
         System.out.println("Login: " + getLogin()+ " e Senha: " +getSenha()+ " criados.");
     }
 

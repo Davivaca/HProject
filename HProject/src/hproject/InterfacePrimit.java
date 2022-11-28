@@ -210,7 +210,7 @@ public class InterfacePrimit {
             System.out.println("---------------------------------------------");
             Scanner leroption = new Scanner(System.in);//objeto que vai ler a opcao inserida
             option = leroption.nextInt();//insere a opcao
-            Scanner geral = new Scanner(System.in);//um scanner geral
+            //Scanner geral = new Scanner(System.in);//um scanner geral
                     switch (option) {
                         case 1:
                         cont12.Agendshow();

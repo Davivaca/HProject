@@ -2,13 +2,13 @@ package hproject;
 import java.util.Scanner;
 
 
-public class HProject {
-
+public class HProject{
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         try{
+            
             int varfinal=0;
             while(varfinal!=2){
             // TODO code application logic here
