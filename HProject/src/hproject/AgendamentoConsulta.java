@@ -66,7 +66,9 @@ public class AgendamentoConsulta extends ControlePrincipal {//vai herdar um mét
     public void escolherEspecialidade() {
         //menu para escolher em qual especialidade o paciente deseja realizar consulta.
         try{
-            int opcao;
+            int opcao = 0;
+            while(opcao !=8){
+            //int opcao;
             
             Scanner entrada = new Scanner(System.in);
             System.out.println("Qual especialidade marcar consulta? Escolha dentre as opções abaixo:");
@@ -77,7 +79,7 @@ public class AgendamentoConsulta extends ControlePrincipal {//vai herdar um mét
             System.out.println("5. Otorrinolaringologia");
             System.out.println("6. Cardiologia");
             System.out.println("7. Endocrinologia");
-            System.out.println("Digite outro valor para encerrar.");
+            System.out.println("8. Sair");
 
             do{
                 //menu();
@@ -112,14 +114,14 @@ public class AgendamentoConsulta extends ControlePrincipal {//vai herdar um mét
                     Endocrinologia();
                     break;
                 
-                case 8:
-                    //voltar pra tela inicial. como?
-                    break;
                 default:
                     break;
+                
                 }
+                if(opcao ==8){
+                    break;}
                 } while(opcao != 0);
-            }
+            }}
             
         catch(Exception e){//exceção caso entre algum caractere não permitido.
             System.out.println("Ocorreu um erro ao tentar escolher uma opção. Tente novamente inserindo apenas valores inteiros");

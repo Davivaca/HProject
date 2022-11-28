@@ -5,7 +5,7 @@ import java.util.Scanner;
  *
  * @author Beatriz
  */
-public class Medico {
+public class Medico extends ControlePrincipal {
     private String paciente;
     private String sexo;
     private int nascimento_dia;
@@ -25,6 +25,7 @@ public class Medico {
         
         System.out.println("Nome do paciente:");
         this.paciente = av.next();
+        addpaci(this.paciente);
         
         System.out.println("sexo:");
         this.sexo = av.next();

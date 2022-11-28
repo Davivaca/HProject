@@ -10,9 +10,10 @@ public class InterfacePrimit {
     Medico med = new Medico();
     Adm adm = new Adm();
     ControlePrincipal cont12;//aqui criamos um objeto da classe controle, para poder utilizar seus metodos
+    
     public InterfacePrimit(){
-    cont12 = new ControlePrincipal();//utilizandoo metodo construtor
-    }
+        cont12 = new ControlePrincipal();//utilizandoo metodo construtor
+        }
     /*esse codigo nao tem mais utilidade mas sera mantido caso surja uma necessidade futura
     *
     *public void intermed(){//toda essa parte se refere a interface dos medicos
@@ -118,8 +119,8 @@ public class InterfacePrimit {
             option = medico.nextInt();
                     switch (option) {
                         case 1:
-                        cont12.Agendshow();
-                            break;
+                            cont12.Agendshow();
+                                break;
                         case 2:
                             med.AvaliacaoPaciente();
                             med.statusAvaliacao();
@@ -149,18 +150,18 @@ public class InterfacePrimit {
             option = medico.nextInt();
                     switch (option) {
                         case 1:
-                        cont12.Agendshow();
-                            break;
+                            cont12.Agendshow();
+                                break;
                         case 2:
-                            adm.cadastrarAdm();
-                            break;
+                                adm.cadastrarAdm();
+                                break;
                         case 3:
-                            adm.cadastrarMedicos();
-                            break;
+                                adm.cadastrarMedicos();
+                                break;
                             
                         case 4:
-                            adm.cadastrarRecepcao();
-                            break;
+                                adm.cadastrarRecepcao();
+                                break;
                         default:
                             break;
                     }
@@ -169,34 +170,34 @@ public class InterfacePrimit {
     
     public void interrec(){//toda essa parte se refere a interface dos recepcionista
         while(option!=4){
-        System.out.println("---------------------------------------------");
-        System.out.println("Bem vindo(a). Por favor, escolha uma das opcoes a seguir:");
-        System.out.println("---------------------------------------------");
-        System.out.println(" 1- Verificar agendamentos");
-        System.out.println(" 2- Fazer agendamento");
-        System.out.println(" 3- Apagar agendamentos");
-        System.out.println(" 4- Sair");
-        System.out.println("---------------------------------------------");
-        Scanner leroption = new Scanner(System.in);//objeto que vai ler a opcao inserida
-        option = leroption.nextInt();//insere a opcao
-        Scanner geral = new Scanner(System.in);//um scanner geral
-                switch (option) {
-                    case 1:
-                    cont12.Agendshow();
-                        break;
-                    case 2:
-                        /*System.out.println("Por favor insira um agendamento");
-                        System.out.println("---------------------------------------------");
-                        setAg(geral.next());//insere o que deseja ser agendado
-                        cont12.Agend(getAg());*/
-                        agconsulta.escolherEspecialidade();
-                        break;
-                    case 3:
-                        cont12.Agenderase();
-                        break;
-                    default:
-                        break;
-                }
+            System.out.println("---------------------------------------------");
+            System.out.println("Bem vindo(a). Por favor, escolha uma das opcoes a seguir:");
+            System.out.println("---------------------------------------------");
+            System.out.println(" 1- Verificar agendamentos");
+            System.out.println(" 2- Fazer agendamento");
+            System.out.println(" 3- Apagar agendamentos");
+            System.out.println(" 4- Sair");
+            System.out.println("---------------------------------------------");
+            Scanner leroption = new Scanner(System.in);//objeto que vai ler a opcao inserida
+            option = leroption.nextInt();//insere a opcao
+            Scanner geral = new Scanner(System.in);//um scanner geral
+                    switch (option) {
+                        case 1:
+                        cont12.Agendshow();
+                            break;
+                        case 2:
+                            /*System.out.println("Por favor insira um agendamento");
+                            System.out.println("---------------------------------------------");
+                            setAg(geral.next());//insere o que deseja ser agendado
+                            cont12.Agend(getAg());*/
+                            agconsulta.escolherEspecialidade();
+                            break;
+                        case 3:
+                            cont12.Agenderase();
+                            break;
+                        default:
+                            break;
+                    }
             }
     }
 

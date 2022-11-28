@@ -24,6 +24,7 @@ public class Adm extends ControlePrincipal{
         this.login = adms.next();
         this.senha = adms.next();
         System.out.println("Login: " + getLogin()+ " e Senha: " +getSenha()+ " criados.");
+        addmed(this.login, this.senha);
     }
     
     public void cadastrarAdm(){//criar login e senhas para outros usuários administradores.
@@ -31,6 +32,7 @@ public class Adm extends ControlePrincipal{
         System.out.println("Crie um login e senha:");
         this.login = adms.next();
         this.senha = adms.next();
+        addadm(this.login,this.senha);
         System.out.println("Login: " + getLogin()+ " e Senha: " +getSenha()+ " criados.");
         
     }
@@ -40,6 +42,7 @@ public class Adm extends ControlePrincipal{
         System.out.println("Crie um login e senha:");
         this.login = adms.next();
         this.senha = adms.next();
+        addrecep(this.login, this.senha);
         System.out.println("Login: " + getLogin()+ " e Senha: " +getSenha()+ " criados.");
     }
 
