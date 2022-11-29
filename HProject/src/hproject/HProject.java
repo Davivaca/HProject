@@ -6,14 +6,24 @@ public class HProject{
     /**
      * @param args the command line arguments
      */
+   static ControlePrincipal alt;
+    public static void altera(ControlePrincipal t1){
+    alt=t1;
+    }
+    public static ControlePrincipal getAlt(){
+    return alt;
+    }
+    
     public static void main(String[] args) {
+                   
         try{
             
             int varfinal=0;
             while(varfinal!=2){
             // TODO code application logic here
-            ControlePrincipal cont11;//aqui criamos um objeto da classe controle, que possui todos os metodos que serao utilizados posteriormente
+    ControlePrincipal cont11;//aqui criamos um objeto da classe controle, que possui todos os metodos que serao utilizados posteriormente               
             cont11 = new ControlePrincipal();
+
             InterfacePrimit inter1;//aqui criamos um objeto da classe interface, que possui todos os metodos que serao usados para interagir com o usuario
             inter1 = new InterfacePrimit();
 
@@ -51,7 +61,11 @@ public class HProject{
             System.out.println("Cadastro invalido!");
             }
 
-        }
+        }else{
+            System.out.println("------------------");
+            System.out.println("Cadastro invalido!");       
+                
+            }
                 }else{
                  System.out.println("------------------");
                  System.out.println("Desligando sistema");
@@ -62,5 +76,6 @@ public class HProject{
     catch(Exception e){//exceção caso entre algum caractere não permitido.
             System.out.println("Ocorreu um erro ao tentar escolher uma opcao. Tente novamente inserindo apenas valores inteiros");
             }
+        
     }
 }

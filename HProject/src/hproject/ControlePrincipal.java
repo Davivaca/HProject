@@ -31,6 +31,21 @@ public class ControlePrincipal {
         senhas_pri.add("64599");
         senhas_pri.add("23764");        
     }
+    public ControlePrincipal(int t){//caso se queira mais usuarios pacientes
+        user_pri.add("ADMdavi");//adiciona os usuarios iniciais
+        user_pri.add("RECjulia");
+        user_pri.add("MEDjoao");
+
+        senhas_pri.add("10023");//adiciona as senhas iniciais
+        senhas_pri.add("64599");
+        senhas_pri.add("23764");  
+        if(t==1){
+        agenda.add("12/12/2022, joao");
+        agenda.add("13/12/2019, janete");
+        agenda.add("9/10/1988, juliana");
+        }
+        
+    }
     
     public String ListaPaciente(){
         pacientes.add("Joao Pinheiro Nasc:12/12/1998");//adiciona os pacientes iniciais

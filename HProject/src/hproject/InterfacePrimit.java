@@ -150,7 +150,7 @@ public class InterfacePrimit implements Interface {
             System.out.println(" 7- Adicionar Clientes");
             System.out.println(" 8- Total de Produtos");
             System.out.println(" 9- valor Planos");
-            System.out.println(" 10- Balanço de Contas");
+            System.out.println(" 10- Balanco de Contas");
             System.out.println(" 11- Listar clientes");
             System.out.println(" 12- Sair");
             System.out.println("---------------------------------------------");
